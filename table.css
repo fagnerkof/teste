@@ -1,0 +1,16 @@
+.table-fixed thead {
+  width: 99%;
+}
+.table-fixed tbody {
+  height: 230px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+  font-size: 13.5px;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: center;
+  border-bottom-width: 0;
+}
