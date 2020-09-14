@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/ac.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/datepicker.css"/>
+  	<link rel="stylesheet" href="css/style.css"/>
+  	<link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="js/jquery.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/moment.js"></script>
+  <script type="text/javascript" src="js/daterangepicker.js"></script>
+	<title>Timesheet</title>
+</head>
+
+<body style="width: 100%; height: 100%; position: fixed;"><font face="Dax" color="#565454">
+	<div class="row">
+		<div class="container-fluid">
+
+	<!-- Modal -->
+ 	<div class="modal fade" id="myModal" role="dialog">
+ 	<div class="modal-dialog">
+ 
+ 	<!-- Modal content-->
+ 	<div class="modal-content">
+ 		<div class="modal-header">
+ 			<button type="button" class="close" data-dismiss="modal">&times;</button>
+ 			<h4 class="modal-title">Favoritos</h4>
+ 		</div>
+ 		<div class="modal-body">
+ 			<a href="#"><p>Favorito 1</p></a>
+ 			<a href="#"><p>Favorito 2</p></a>
+ 			<a href="#"><p>Favorito 3</p></a>
+ 			<a href="#"><p>Favorito 4</p></a>
+ 		</div>
+ 		<div class="modal-footer">
+ 			<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+ 		</div>
+ 	</div>
+ 	</div>
+ 	</div>
+  <!-- Fim Modal-->
+
+	<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-11" style="height: 100%; width: 90%; float: left">
+		    <img src="modelo17.png" alt="Logomarca da empresa" width="100%">
+      </div>
+  
+      <div class="col-md-1" style="height: 100%; width: 10%; float: right; top: 15px">
+		    <a href="paglogin/login.htm" class="glyphicon glyphicon-off"; title="Logout"; style="font-size: 32px; text-decoration: none"></a>
+      </div>
+    </div>
+	</div>
+			
+
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col-md-9" style="left: 20px; height: 0px; width: 1040px">
+			<div class="panel-group" id="accordion">
+  				<div class="panel panel-default">
+   					<div class="panel-heading">
+      				<h4 class="panel-title">
+        			<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          			CADASTRO
+        			</a>
+      				</h4>
+    			</div>
+
+    <div id="collapseOne" class="panel-collapse collapse in">
+      	<div class="panel-body">
+       	<div class="row">
+
+				<div class="form-group col-md-4">
+				<select class="form-control"  id="colaborador" name="Colaborador">
+				<option value="" selected disabled>Colaborador</option>
+   		 		<option value="">Fulano A</option>
+    			<option value="">Fulano B</option>
+    			<option value="">Fulano C</option>
+				</select>
+				</div>	
+
+				<div class="form-group col-md-4">	
+				<select class="form-control"  id="projeto" name="Projeto">
+				<option value="" selected disabled>Projeto</option>
+   		 		<option value="">Projeto A</option>
+    			<option value="">Projeto B</option>
+    			<option value="">Projeto C</option>
+				</select>
+				</div>
+
+				<div class="form-group col-md-4">	 	
+				<select class="form-control"  id="categoria" name="Categoria">
+				<option value="" selected disabled>Categoria</option>
+   		 		<option value="">Categoria A</option>
+    			<option value="">Categoria B</option>
+    			<option value="">Categoria C</option>
+				</select>
+				</div>	
+
+				<div class="form-group col-md-4">	 	
+				<select class="form-control"  id="workgroup" name="Workgroup">
+				<option value="" selected disabled>Workgroup</option>
+   		 		<option value="">Workgroup A</option>
+    			<option value="">Workgroup B</option>
+    			<option value="">Workgroup C</option>
+				</select>
+				</div>
+
+				<div class="form-group col-md-4">	 	
+				<select class="form-control" id="tarefa" name="Tarefa">
+				<option value="" selected disabled>Tarefa</option>
+   		 		<option value="">Tarefa A</option>
+    			<option value="">Tarefa B</option>
+    			<option value="">Tarefa C</option>
+				</select>
+				</div>
+
+				<div class="form-group col-md-4">	 	
+				<input type="number" min="0.0" max="8.0" step="0.25" class="form-control" id="horas" placeholder="Horas" name="horas">
+				</div>
+
+				<div class="form-group col-md-8">	 
+				<textarea style="resize: none" class="form-control" id="descricao" rows="1" placeholder="Descrição"></textarea>
+				</div>
+	
+				<div class="form-group col-md-2">
+				<input name="Checkbox1" type="checkbox" id="checkbox"> Salvar favorito
+				</div>
+
+				<div class="form-group col-md-1" style="left: 47px">
+				<input type="submit" id="adicionar" value="ADICIONAR" style="width: 90px; color:#ffffff; background-color: #005787; border-color: #005787; border: 2px solid #005787">
+				</div>
+
+		</div>	
+      	</div>
+    </div>
+  	</div>
+	<br>
+  	<div class="panel panel-default">
+    	<div class="panel-heading">
+      		<h4 class="panel-title">
+        	<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          	BUSCA
+        	</a>
+      		</h4>
+    	</div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      	<div class="panel-body">
+       	<div class="row">
+
+				<div class="form-group col-md-4">
+				<select class="form-control"  id="colaborador" name="Colaborador">
+				<option value="" selected disabled>Colaborador</option>
+   		 		<option value="">Fulano A</option>
+    			<option value="">Fulano B</option>
+    			<option value="">Fulano C</option>
+				</select>
+				</div>	
+
+				<div class="form-group col-md-4">	
+				<select class="form-control"  id="projeto" name="Projeto">
+				<option value="" selected disabled>Projeto</option>
+   		 		<option value="">Projeto A</option>
+    			<option value="">Projeto B</option>
+    			<option value="">Projeto C</option>
+				</select>
+				</div>
+
+				<div class="form-group col-md-4">	 	
+				<select class="form-control"  id="categoria" name="Categoria">
+				<option value="" selected disabled>Categoria</option>
+   		 		<option value="">Categoria A</option>
+    			<option value="">Categoria B</option>
+    			<option value="">Categoria C</option>
+				</select>
+				</div>	
+
+				<div class="form-group col-md-4">	 	
+				<select class="form-control"  id="workgroup" name="Workgroup">
+				<option value="" selected disabled>Workgroup</option>
+   		 		<option value="">Workgroup A</option>
+    			<option value="">Workgroup B</option>
+    			<option value="">Workgroup C</option>
+				</select>
+				</div>
+
+				<div class="form-group col-md-4">	 	
+				<select class="form-control" id="tarefa" name="Tarefa">
+				<option value="" selected disabled>Tarefa</option>
+   		 		<option value="">Tarefa A</option>
+    			<option value="">Tarefa B</option>
+    			<option value="">Tarefa C</option>
+				</select>
+				</div>
+
+				<div class="form-group col-md-4">	 	
+				<input type="number" min="0.0" max="10" step="0.5" class="form-control" id="horas" placeholder="Horas" name="horas">
+				</div>
+
+				<div class="form-group col-md-4">	 
+				Período: 
+        <input type="text" name="daterange" value="01/01/2018 - 31/01/2018" style="width: 255px; border: 1px solid #ccc;
+    border-top-color: rgb(204, 204, 204);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(204, 204, 204);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(204, 204, 204);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(204, 204, 204);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;padding: 6px 12px;
+    padding-top: 5px;
+    padding-right: 12px;
+    padding-bottom: 5px;
+    padding-left: 12px;">
+        <script type="text/javascript" src="js/datelocale.js"></script>
+				</div>
+
+        <div class="form-group col-md-4">   
+        <input name="Checkbox2" type="checkbox" id="checkboxhe"> Hora Extra
+        </div>
+
+				<div class="form-group col-md-1" style="left: 215px">
+				<input type="submit" id="buscar" value="BUSCAR" style="width: 90px; color:#ffffff; background-color: #005787; border-color: #005787; border: 2px solid #005787">
+				</div>
+
+			</div>	<!-- div da row do formulario de accordion 1-->
+		</div>
+		</div>
+	</div>
+	</div> <!-- div principal do accordion-->
+
+<br>
+<link rel="stylesheet" href="css/table.css">
+	<div class="container-fluid">
+  		<div class="row">
+      	<div class="panel panel-default" style="margin-top: -20px">
+        	<table class="table table-fixed" style="margin-top: 0px">
+          		<thead>
+            	<tr>
+              	<th class="col-xs-2">Colaborador</th>
+              	<th class="col-xs-2">&nbsp Projeto</th>
+              	<th class="col-xs-2">&nbsp&nbsp WorkGroup</th>
+              	<th class="col-xs-2">&nbsp Tarefa</th>
+              	<th class="col-xs-1">&nbsp Horas</th>
+              	<th class="col-xs-1">Hora Extra</th>
+              	<th class="col-xs-1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Data</th>
+              	<th class="col-xs-1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Ação</th>
+            	</tr>
+          		</thead>
+
+          		<tbody>
+            	<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+              	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			  	</th>
+            	</tr>
+
+          		<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+              	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			  	</th>
+            	</tr>
+
+            	<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+              	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			  	</th>
+            	</tr>
+
+            	<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+              	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			  	</th>
+            	</tr>
+
+            	<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+              	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			 	</th>
+            	</tr>
+
+            	<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+              	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			  	</th>
+            	</tr>
+
+            	<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+              	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			  	</th>
+           		</tr>
+
+            	<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+              	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			  	</th>
+            	</tr>
+
+            	<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+              	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			  	</th>
+            	</tr>
+
+            	<tr>
+              	<td class="col-xs-2">FULANO DE TAL</td>
+              	<td class="col-xs-2">Projeto Best</td>
+              	<td class="col-xs-2">Manutenção de Cadastros</td>
+              	<td class="col-xs-2">Release 7</td>
+             	<td class="col-xs-1">8.00</td>
+              	<td class="col-xs-1">false</td>
+              	<td class="col-xs-1">16/11/2017</td>
+              	<th class="col-xs-1">
+				<a href="#"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-copy" title="Copy"></span></a>&nbsp;
+				<a href="#"><span class="glyphicon glyphicon-remove" title="Delete"></span></a>
+			  	</th>
+            	</tr>
+  
+          		</tbody>
+        	</table>
+      	</div>
+  		</div>
+	</div>
+
+	<div class="col-md-3" style="left: 1050px; top: 80px; width: 290px; position: fixed"> <!-- Calendario-->
+	<div>
+    <div id="docs-main" class="content">
+  	<div class="v-log" id="v-log"></div>
+        <div class="visual-tests"  style="left: 20px; width: 250px; position: relative;">
+        	<div class="row">
+            <div class="vt-tile"">
+            	<div class="datepicker-here">
+            	</div>
+            </div>
+            </div>
+				<script language="JavaScript" src="js/datepicker.js"></script>
+				<script language="JavaScript" src="js/datepicker.pt-BR.js"></script>
+		</div>
+
+	<div style="width: 250px; height: 280px">
+		<p class="text-center" style="width: 260px">
+			<span style="font-weight:bold; font-size: 15px">Horas pendentes para o <br>dia selecionado:</span>
+			<span id= "remh" style="color:red;font-weight:bold">8</span>
+		</p>
+		<div style="height: 25px; width: 260px" class="text-center">
+		<p>
+			<form method="post">
+			<br>
+			<fieldset name="Group1">
+			<span class="auto-style1"><b>Pendências</b></span>
+		<textarea readonly name="TextArea1" style="resize: none; font-size: 15px; width: 200px; height: 108px">
+17/11/17: 8hs
+18/11/17: 2hs
+19/11/17: 1hs
+19/11/17: 1hs
+19/11/17: 1hs
+19/11/17: 1hs
+19/11/17: 1hs</textarea>
+			</fieldset>
+			</form>
+		</p>
+		
+	<div style="height: 25px; width: 260px;" class="text-center">
+		<input type="button" data-toggle="modal" data-target="#myModal" id="adicionar0" value="FAVORITOS" style="width: 90px; color:#ffffff; background-color: #005787; border-color: #005787; border: 2px solid #005787">
+		<input type="button" id="adicionar1" value="EXPORTAR" style="width: 90px; color:#ffffff; background-color: #50a543; border-color: #50a543; border: 2px solid #50a543"><br><br>
+	</div>
+	<br>
+		</div>
+		</div>
+	</div>
+
+	</div> <!-- aqui termina ó código a ser verificado-->
+	</div>
+	</div>
+	</div>
+
+</font>
+</body>
+</html>
